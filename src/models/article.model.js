@@ -9,8 +9,14 @@ const articleSchema = mongoose.Schema(
     marche: {
       type: String,
     },
-    likers: {
-      type: [String],
+    percent_price_mois: {
+      type: Number,
+    },
+    percent_price_6mois: {
+      type: Number,
+    },
+    percent_price_year: {
+      type: Number,
     },
   },
   {
