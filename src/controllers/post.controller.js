@@ -9,13 +9,13 @@ module.exports.setPArticle = async (req, res) => {
   if (!req.body.nom) {
     res.status(400).json({ message: "Merci d'ajouter un message" })
   }
-
+  console.log(req.body)
   const post = await ArticleModel.create({
     nom: req.body.nom,
     marche: req.body.marche,
     percent_price_mois: req.body.percent_price_mois,
     percent_price_6mois: req.body.percent_price_6mois,
-    percent_price_year:req.body.percent_price_year
+    percent_price_year: req.body.percent_price_year,
   })
   res.status(200).json(post)
 }
